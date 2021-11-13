@@ -1,0 +1,16 @@
+version: v1
+plugins:
+  - name: js
+    out: src/__generated__
+    opt:
+      - import_style=commonjs
+      - binary
+  - name: ts
+    path: ./node_modules/.bin/protoc-gen-ts
+    out: src/__generated__
+    opt:
+      - grpc_js
+  - name: grpc
+    path: ./node_modules/.bin/grpc_tools_node_protoc_plugin
+    out: src/__generated__
+    opt: grpc_js
