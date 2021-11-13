@@ -1,0 +1,11 @@
+version: v1
+plugins:
+  - name: ts
+    path: ./node_modules/.bin/protoc-gen-ts
+    out: src/__generated__
+    opt:
+      - client_none
+      - generate_dependencies
+  - name: twirp
+    path: ./node_modules/.bin/protoc-gen-twirp_ts
+    out: src/__generated__

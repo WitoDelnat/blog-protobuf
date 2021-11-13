@@ -1,0 +1,12 @@
+syntax = "proto3";
+package zagrit.v1;
+
+service BlogService {
+  rpc Blogs(Empty) returns (BlogsResponse);
+  rpc BlogCreate(BlogCreateRequest) returns (Empty);
+}
+
+message Empty {}
+message Blog { string title = 1; string content = 2; }
+message BlogsResponse { repeated Blog blogs = 1; }
+message BlogCreateRequest { string title = 1; string content = 2; }
