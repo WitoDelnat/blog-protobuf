@@ -9,6 +9,7 @@ Read the blog at https://www.witodelnat.eu/blog/2021/protobuf-typescript.
 ```
 cd twirp-server
 yarn install
+buf generate --path proto/blog.proto
 yarn dev
 ```
 
@@ -17,6 +18,7 @@ yarn dev
 ```
 cd grpc-server
 yarn install
+buf generate --path proto/blog.proto
 yarn dev
 ```
 
